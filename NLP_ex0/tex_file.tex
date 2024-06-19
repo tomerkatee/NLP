@@ -1,0 +1,88 @@
+%% LyX 2.3.8 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{babel}
+\begin{document}
+\begin{center}
+{\LARGE{}Gradient Descent Very Brief Review}{\LARGE\par}
+\par\end{center}
+
+\begin{center}
+{\large{}Eivi Katz \quad{} Tomer Katee}{\large\par}
+\par\end{center}
+
+\begin{center}
+{\large{}214208704 \qquad{}214166027}{\large\par}
+\par\end{center}
+
+\begin{center}
+{\large{}May 31, 2024}{\large\par}
+\par\end{center}
+
+\begin{center}
+\textbf{Abstract}
+\par\end{center}
+
+Gradient descent is an iterative optimization algorithm for finding
+the local minimum of a function. It and its variants are with no doubt
+the most common optimization algorithms which are used in ML.
+
+\textbf{\Large{}\begin{flushleft}1}{\large{}\quad{}}\textbf{\Large{}Introduction\end{flushleft}}{\Large\par}
+
+\noindent Optimization refers to the task of minimizing/maximizing
+an objective function $f(x)$ parameterized by $x$. In machine/deep
+learning terminology, it\textquoteright s the task of minimizing the
+cost/loss function $\mathcal{L}(\theta)$ parameterized by the model\textquoteright s
+parameters $\theta\in R^{d}$. This objective function might be represented
+in many ways - it could be a simple linear function such that $\theta$
+is just one matrix, as well as a 175B parameters transformer architecture,
+such that $\theta$ is a collection of large number of matrices and
+bias terms. Optimization algorithms (in the case of minimization)
+have one of the following goals:
+\begin{itemize}
+\item Find the global minimum of the objective function. This is feasible
+if the objective function is convex, i.e. any local minimum is a global
+minimum.
+\item Find the lowest possible value of the objective function within its
+neighborhood. That\textquoteright s usually the case if the objective
+function is not convex as the case in most deep learning problems.
+\end{itemize}
+\textbf{\Large{}\begin{flushleft}2}{\large{}\quad{}}\textbf{\Large{}Algorithm\end{flushleft}}{\Large\par}
+
+\noindent Let\textquoteright s denote our objective function by $\mathcal{L}$
+(it is often referred to it as the loss function), and let\textquoteright s
+say it is parameterized with some parameters which we will denote
+with $\theta$. Additionally, let\textquoteright s denote an additional
+hyperparameter the algorithm uses, called the learning rate, with
+$\eta$. The Vanilla Gradient Descent Algorithm suggests following
+these following steps:
+\begin{enumerate}
+\item Start by Randomly initialize values for $\theta_{0}$
+\item Update $\theta$ values: $\theta_{t+1}$ = $\theta_{t}$ \textminus{}
+$\eta\nabla L(\theta)$
+\item Repeat until the slope is approximately flat. Namely, $\frac{\partial\mathcal{L}(\theta)}{\partial\theta}\thickapprox0$
+\end{enumerate}
+\begin{onehalfspace}
+\textbf{\large{}2.1}{\large{}\quad{}}\textbf{\large{}Learning Rate}{\large\par}
+\end{onehalfspace}
+
+\begin{onehalfspace}
+\noindent How big the steps gradient descent takes into the direction
+of the local minimum are determined by the learning rate, which figures
+out how fast or slow we will move towards the optimal weights. To
+illustrate the effects of a wrong/right choice of the learning rate,
+Figure 1 is attached.
+\end{onehalfspace}
+
+\begin{center}
+\includegraphics[viewport=0bp 0bp 749.698bp 562.847bp,scale=0.75]{pasted1}
+\par\end{center}
+\end{document}
