@@ -4,8 +4,8 @@ import random
 import numpy as np
 
 from helpers.utils import normalize_rows, sigmoid, get_negative_samples
-from q3a_softmax import softmax
-from q3b_gradcheck import gradcheck_naive
+from q2a_softmax import softmax
+from q2b_gradcheck import gradcheck_naive
 
 
 def naive_softmax_loss_and_gradient(
@@ -38,7 +38,17 @@ def naive_softmax_loss_and_gradient(
     """
 
     ### YOUR CODE HERE
-    raise NotImplementedError
+    softmaxes = softmax(np.dot(outside_vectors, center_word_vec))
+
+    loss = -np.log(softmaxes[outside_word_idx])
+
+    # calculating mean as taught in class
+    mean = np.sum(outside_vectors * softmaxes[:, np.newaxis], axis=0, keepdims=True)
+    grad_center_vec = outside_vectors[outside_word_idx] - mean
+
+    grad_outside_vecs = np.dot(softmaxes, center_word_vec)
+    grad_outside_vecs[outside_word_idx] -= center_word_vec
+
     ### END YOUR CODE
 
     return loss, grad_center_vec, grad_outside_vecs
@@ -71,7 +81,13 @@ def neg_sampling_loss_and_gradient(
     indices = [outside_word_idx] + neg_sample_word_indices
 
     ### YOUR CODE HERE
-    raise NotImplementedError
+    sigmoid = lambda x: 1 / (1 + np.exp(-x))
+
+    vec_products = -outside_vectors[indices] @ center_word_vec
+    vec_products[0] *= -1
+    loss = np.sum(-np.log(sigmoid(vec_products)))
+
+
     ### END YOUR CODE
 
     return loss, grad_center_vec, grad_outside_vecs
