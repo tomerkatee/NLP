@@ -81,13 +81,20 @@ def neg_sampling_loss_and_gradient(
     indices = [outside_word_idx] + neg_sample_word_indices
 
     ### YOUR CODE HERE
+    outside_and_neg_vectors = outside_vectors[indices]
+
     sigmoid = lambda x: 1 / (1 + np.exp(-x))
 
-    vec_products = -outside_vectors[indices] @ center_word_vec
+    vec_products = -outside_and_neg_vectors @ center_word_vec
     vec_products[0] *= -1
     loss = np.sum(-np.log(sigmoid(vec_products)))
 
-
+    one_minus_sigmoids = 1 - sigmoid(vec_products)
+    one_minus_sigmoids[0] *= -1 
+    grad_center_vec = np.sum(outside_and_neg_vectors * one_minus_sigmoids[:, np.newaxis], axis=0)
+    
+    grad_outside_vecs = outside_vectors * 0
+    grad_outside_vecs[indices] = center_word_vec * one_minus_sigmoids[:, np.newaxis]
     ### END YOUR CODE
 
     return loss, grad_center_vec, grad_outside_vecs
@@ -128,7 +135,15 @@ def skipgram(current_center_word, outside_words, word2ind,
     grad_outside_vectors = np.zeros(outside_vectors.shape)
 
     ### YOUR CODE HERE
-    raise NotImplementedError
+    
+    center_word_vec = center_word_vectors[word2ind(current_center_word)]
+
+    for word in outside_words:
+        res = word2vec_loss_and_gradient(center_word_vec, word2ind(word), outside_words, dataset)
+        loss += res[0]
+        grad_center_vecs += res[1]
+        grad_outside_vectors += res[2]
+
     ### END YOUR CODE
 
     return loss, grad_center_vecs, grad_outside_vectors
