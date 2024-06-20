@@ -38,15 +38,16 @@ def naive_softmax_loss_and_gradient(
     """
 
     ### YOUR CODE HERE
+
     softmaxes = softmax(np.dot(outside_vectors, center_word_vec))
 
     loss = -np.log(softmaxes[outside_word_idx])
 
     # calculating mean as taught in class
     mean = np.sum(outside_vectors * softmaxes[:, np.newaxis], axis=0, keepdims=True)
-    grad_center_vec = outside_vectors[outside_word_idx] - mean
+    grad_center_vec = mean - outside_vectors[outside_word_idx]
 
-    grad_outside_vecs = np.dot(softmaxes, center_word_vec)
+    grad_outside_vecs = center_word_vec * softmaxes[:, np.newaxis]
     grad_outside_vecs[outside_word_idx] -= center_word_vec
 
     ### END YOUR CODE
@@ -136,12 +137,14 @@ def skipgram(current_center_word, outside_words, word2ind,
 
     ### YOUR CODE HERE
     
-    center_word_vec = center_word_vectors[word2ind(current_center_word)]
+    
+    center_word_index = word2ind[current_center_word]
+    center_word_vec = center_word_vectors[center_word_index]
 
     for word in outside_words:
-        res = word2vec_loss_and_gradient(center_word_vec, word2ind(word), outside_words, dataset)
+        res = word2vec_loss_and_gradient(center_word_vec, word2ind[word], outside_vectors, dataset)
         loss += res[0]
-        grad_center_vecs += res[1]
+        grad_center_vecs[center_word_index] += np.squeeze(res[1])
         grad_outside_vectors += res[2]
 
     ### END YOUR CODE
