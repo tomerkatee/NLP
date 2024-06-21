@@ -82,6 +82,7 @@ def neg_sampling_loss_and_gradient(
     indices = [outside_word_idx] + neg_sample_word_indices
 
     ### YOUR CODE HERE
+
     outside_and_neg_vectors = outside_vectors[indices]
 
     sigmoid = lambda x: 1 / (1 + np.exp(-x))
@@ -94,8 +95,12 @@ def neg_sampling_loss_and_gradient(
     one_minus_sigmoids[0] *= -1 
     grad_center_vec = np.sum(outside_and_neg_vectors * one_minus_sigmoids[:, np.newaxis], axis=0)
     
-    grad_outside_vecs = outside_vectors * 0
-    grad_outside_vecs[indices] = center_word_vec * one_minus_sigmoids[:, np.newaxis]
+    grad_outside_vecs = np.zeros_like(outside_vectors)
+    grad_outside_vecs[outside_word_idx] = one_minus_sigmoids[0] * center_word_vec
+    for i in range(len(neg_sample_word_indices)):
+        grad_outside_vecs[neg_sample_word_indices[i]] += one_minus_sigmoids[i+1] * center_word_vec
+
+
     ### END YOUR CODE
 
     return loss, grad_center_vec, grad_outside_vecs
