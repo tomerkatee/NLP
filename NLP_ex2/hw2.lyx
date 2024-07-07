@@ -1,0 +1,424 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "David"
+\font_sans "default" "David"
+\font_typewriter "default" "David"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing other 1.2
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 2cm
+\rightmargin 1cm
+\bottommargin 3cm
+\headheight 0cm
+\headsep 0cm
+\footskip 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "20pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\paragraph_spacing double
+\align center
+
+\series bold
+\size huge
+עיבוד שפה טבעית | תרגיל
+\family roman
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+מגישים:
+\begin_inset Newline newline
+\end_inset
+
+תומר קטיעי
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Newline newline
+\end_inset
+
+
+\numeric off
+אייבי כץ
+\numeric on
+
+\begin_inset Newline newline
+\end_inset
+
+
+\numeric off
+אחמד חלאילה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+שאלה
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\end_layout
+
+\begin_layout Subsection*
+סעיף
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+a
+\end_layout
+
+\begin_layout Standard
+ראשית נעביר את ה-
+\lang english
+Cross Entropy Loss
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+לצורה שיותר נוח לגזור
+\begin_inset Formula 
+\[
+CE(y,\hat{y})=-\sum_{i}y_{i}\cdot\log(\hat{y_{i}})=-\sum_{i}y_{i}\cdot\log(softmax(\theta)_{i})=-\sum_{i}y_{i}\cdot\log\left(\frac{\exp(\theta_{i})}{\sum_{j}\exp(\theta_{j})}\right)=-\sum_{i}y_{i}\cdot\left(\log\left(\exp(\theta_{i})\right)-\log\left(\sum_{j}\exp(\theta_{j})\right)\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=-\sum_{i}y_{i}\cdot\log\left(\exp(\theta_{i})\right)+\log\left(\sum_{j}\exp(\theta_{j})\right)\sum_{i}y_{i}=-\sum_{i}y_{i}\theta_{i}+\log\left(\sum_{j}\exp(\theta_{j})\right)
+\]
+
+\end_inset
+
+כעת נגזור לפי 
+\begin_inset Formula $\theta_{k}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $k$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+\frac{\partial CE(y,\hat{y})}{\partial\theta_{k}}=-y_{k}+\frac{\exp(\theta_{k})}{\sum_{j}\exp(\theta_{j})}=-y_{k}+softmax(\theta)_{k}
+\]
+
+\end_inset
+
+כלומר הגרדיינט הוא
+\begin_inset Formula 
+\[
+\frac{\partial CE(y,\hat{y})}{\partial\theta}=-y+softmax(\theta)=\hat{y}-y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+סעיף
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+b
+\end_layout
+
+\begin_layout Standard
+ניעזר בכלל השרשרת:
+\begin_inset Formula 
+\[
+\frac{\partial J}{\partial x}=\frac{\partial CE(\hat{y}-y)}{\partial x}=\frac{\partial CE(\hat{y}-y)}{\partial(hW_{2}+b_{2})}\cdot\frac{\partial(hW_{2}+b_{2})}{\partial h}\cdot\frac{\partial h}{\partial(xW_{1}+b_{1})}\cdot\frac{\partial(xW_{1}+b_{1})}{\partial x}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=(\hat{y}-y)\cdot W_{2}^{T}\cdot h(1-h)\cdot W_{1}^{T}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
