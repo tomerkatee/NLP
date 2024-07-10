@@ -337,7 +337,7 @@ CE(y,\hat{y})=-\sum_{i}y_{i}\cdot\log(\hat{y_{i}})=-\sum_{i}y_{i}\cdot\log(softm
 
 \begin_inset Formula 
 \[
-=-\sum_{i}y_{i}\cdot\log\left(\exp(\theta_{i})\right)-\log\left(\sum_{j}\exp(\theta_{j})\right)\sum_{i}y_{i}=-\sum_{i}y_{i}\theta_{i}-\log\left(\sum_{j}\exp(\theta_{j})\right)
+=-\sum_{i}y_{i}\cdot\log\left(\exp(\theta_{i})\right)+\log\left(\sum_{j}\exp(\theta_{j})\right)\sum_{i}y_{i}=-\sum_{i}y_{i}\theta_{i}+\log\left(\sum_{j}\exp(\theta_{j})\right)
 \]
 
 \end_inset
@@ -353,7 +353,7 @@ CE(y,\hat{y})=-\sum_{i}y_{i}\cdot\log(\hat{y_{i}})=-\sum_{i}y_{i}\cdot\log(softm
 : 
 \begin_inset Formula 
 \[
-\frac{\partial CE(y,\hat{y})}{\partial\theta_{k}}=-y_{k}-\frac{\exp(\theta_{k})}{\sum_{j}\exp(\theta_{j})}=-y_{k}-softmax(\theta)_{k}
+\frac{\partial CE(y,\hat{y})}{\partial\theta_{k}}=-y_{k}+\frac{\exp(\theta_{k})}{\sum_{j}\exp(\theta_{j})}=-y_{k}+softmax(\theta)_{k}
 \]
 
 \end_inset
@@ -361,7 +361,7 @@ CE(y,\hat{y})=-\sum_{i}y_{i}\cdot\log(\hat{y_{i}})=-\sum_{i}y_{i}\cdot\log(softm
 כלומר הגרדיינט הוא
 \begin_inset Formula 
 \[
-\frac{\partial CE(y,\hat{y})}{\partial\theta}=-y-softmax(\theta)
+\frac{\partial CE(y,\hat{y})}{\partial\theta}=-y+softmax(\theta)=\hat{y}-y
 \]
 
 \end_inset
@@ -401,6 +401,22 @@ b
 \end_layout
 
 \begin_layout Standard
+ניעזר בכלל השרשרת:
+\begin_inset Formula 
+\[
+\frac{\partial J}{\partial x}=\frac{\partial CE(\hat{y}-y)}{\partial x}=\frac{\partial CE(\hat{y}-y)}{\partial(hW_{2}+b_{2})}\cdot\frac{\partial(hW_{2}+b_{2})}{\partial h}\cdot\frac{\partial h}{\partial(xW_{1}+b_{1})}\cdot\frac{\partial(xW_{1}+b_{1})}{\partial x}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=(\hat{y}-y)\cdot W_{2}^{T}\cdot h(1-h)\cdot W_{1}^{T}
+\]
+
+\end_inset
+
 
 \end_layout
 

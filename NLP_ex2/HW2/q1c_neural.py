@@ -31,7 +31,7 @@ def forward(data, label, params, dimensions):
         
     h = sigmoid(np.dot(data, W1) + b1)
     pred = softmax(np.dot(h, W2) + b2)
-    return pred[label]
+    return pred.reshape(2000)[label]
 
     ### END YOUR CODE
 
