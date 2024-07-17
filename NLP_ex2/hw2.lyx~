@@ -698,12 +698,30 @@ a
 \end_layout
 
 \begin_layout Standard
-היתרון של מודל מבוסס תווים הוא שהוא שיש הרבה פחות פרמטרים לאימון מאשר במודל
- מבוסס מילים כמו
+
+\lang english
+The advantage of a character-based model is that it has far fewer parameters
+ to train compared to a word-based model like skipgram.
+ This is because there are significantly fewer characters (e.g., if working
+ with ASCII characters) than words.
+ Another advantage is the ability to read and generate words that are not
+ in the predefined vocabulary, such as the ability to read misspellings
+ and work with new names.
+ On the other hand, an advantage of a word-based model is that there is
+ no risk of misspellings or invented words when generating text (since the
+ valid words are predefined).
+ Another advantage is the ability to base the model on the semantic proximity
+ of words, similar to how humans think about language: humans do not rely
+ on the relationship between letters when they speak and read, but on the
+ relationship between the words themselves.
+\end_layout
+
+\begin_layout Subsection*
+סעיף
 \family roman
-\series medium
+\series bold
 \shape up
-\size normal
+\size large
 \emph off
 \bar no
 \strikeout off
@@ -726,81 +744,40 @@ a
 \noun default
 \color inherit
 \lang english
-skipgram
-\lang hebrew
-.
- זה קורה משום שיש הרבה פחות תווים )למשל
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-אם עובדים עם תווי
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
+b
+\end_layout
+
+\begin_layout Standard
+השלמנו את הקוד בקובץ ה-
 \lang english
-ASCII
+ipynb
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
 \lang hebrew
-( מאשר מילים.
-\begin_inset Newline newline
-\end_inset
-
-יתרון נוסף הוא היכולת לקרוא ולייצר מילים שאינן באוצר המילים המוגדר מראש,
- כמו למשל היכולת לקרוא שגיאות כתיב ולעבוד עם שמות חדשים.
-\begin_inset Newline newline
-\end_inset
-
-לעומת זאת יתרון של מודל מבוסס מילים הוא שאין בו סכנה של שגיאות כתיב או מילים
- מומצאות כשמייצרים טקסט למשל )כי המילים החוקיות מוגדרות מראש(.
-\begin_inset Newline newline
-\end_inset
-
-יתרון נוסף הוא היכולת לבסס את המודל על קרבה סמנטית של מילים בדומה לאיך שבני
- אדם חושבים על שפה: בני אדם לא מתבססים על הקשר בין האותיות כשהם מדברים וקוראים,
- אלא על הקשר בין המילים עצמן.
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+המצורף.
 \end_layout
 
 \end_body
