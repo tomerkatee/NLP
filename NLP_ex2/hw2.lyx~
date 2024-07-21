@@ -265,6 +265,11 @@ today
 1
 \end_layout
 
+\begin_layout Standard
+חלק זה הוא בעברית, סליחה אבל הסתבכנו עם התרגום שלו בליך, שאר החלקים יהיו
+ באנגלית.
+\end_layout
+
 \begin_layout Subsection*
 סעיף
 \family roman
@@ -636,65 +641,15 @@ dev-perplexity = 113.313
 \end_layout
 
 \begin_layout Section*
-חלק
-\family roman
-\series bold
-\shape up
-\size larger
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\numeric on
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-2
+
+\lang english
+section 2
 \end_layout
 
 \begin_layout Subsection*
-סעיף
-\family roman
-\series bold
-\shape up
-\size large
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
+
 \lang english
-a
+part a
 \end_layout
 
 \begin_layout Standard
@@ -717,67 +672,67 @@ The advantage of a character-based model is that it has far fewer parameters
 \end_layout
 
 \begin_layout Subsection*
-סעיף
-\family roman
-\series bold
-\shape up
-\size large
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
+
 \lang english
-b
+part b
 \end_layout
 
 \begin_layout Standard
-השלמנו את הקוד בקובץ ה-
+
 \lang english
-ipynb
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-\lang hebrew
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-המצורף.
+We have completed the code in the attached .ipynb file.
+\end_layout
+
+\begin_layout Section*
+
+\lang english
+section 3
+\end_layout
+
+\begin_layout Subsection*
+
+\lang english
+part a
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+2^{-\frac{1}{M}\sum_{i=1}^{M}\log_{2}p(s_{i}\mid s_{1},\ldots,s_{i-1})}=2^{-\frac{1}{M}\log_{2}\left(\prod_{i=1}^{M}p(s_{i}\mid s_{1},\ldots,s_{i-1})\right)}=\left(2^{\log_{2}\left(\prod_{i=1}^{M}p(s_{i}\mid s_{1},\ldots,s_{i-1})\right)}\right)^{-\frac{1}{M}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\left(\prod_{i=1}^{M}p(s_{i}\mid s_{1},\ldots,s_{i-1})\right)^{-\frac{1}{M}}=\left(e^{\ln\left(\prod_{i=1}^{M}p(s_{i}\mid s_{1},\ldots,s_{i-1})\right)}\right)^{-\frac{1}{M}}=e^{-\frac{1}{M}\ln\left(\prod_{i=1}^{M}p(s_{i}\mid s_{1},\ldots,s_{i-1})\right)}=e^{-\frac{1}{M}\sum_{i=1}^{M}\ln p(s_{i}\mid s_{1},\ldots,s_{i-1})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+
+\lang english
+part b
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+For the bi-gram LM model we got 5.77 perplexity for the Shakespeare data,
+ and 24.69 for the Wikipedia data.
+\begin_inset Newline newline
+\end_inset
+
+As for the model from the previous section, we got 7.15 perplexity for the
+ Shakespeare data, and 18.35 for the Wikipedia data.
 \end_layout
 
 \end_body
