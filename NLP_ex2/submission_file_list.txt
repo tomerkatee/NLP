@@ -1,0 +1,6 @@
+hw2.pdf
+q1c_neural.py
+q1d_neural_lm.py
+saved_params_40000.npy
+q3_char_nn_generation.ipynb
+q5.ipynb
