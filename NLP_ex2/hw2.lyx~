@@ -726,13 +726,209 @@ part b
 \begin_layout Standard
 
 \lang english
-For the bi-gram LM model we got 5.77 perplexity for the Shakespeare data,
- and 24.69 for the Wikipedia data.
+For the bi-gram LM model we got 111.72 perplexity for the Shakespeare data,
+ and 82.90 for the Wikipedia data.
 \begin_inset Newline newline
 \end_inset
 
 As for the model from the previous section, we got 7.15 perplexity for the
  Shakespeare data, and 18.35 for the Wikipedia data.
+\end_layout
+
+\begin_layout Subsection*
+
+\lang english
+part c
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+In the results we noticed various differences.
+\begin_inset Newline newline
+\end_inset
+
+Firstly the difference between Shakespeare data and Wikipedia data perplexity
+ in the Bi-Gram model is due to the model being trained on more 'regular'
+ text (in a brief look it seems like some newspaper text) which is closer
+ to what Wikipedia contains, in contrast to Shakespeare texts carrying a
+ unique style of writing that doesn't use every day words like Wikipedia.
+\begin_inset Newline newline
+\end_inset
+
+We can also notice a symmetric phenomenon in the character-based model from
+ the previous section: it is trained on Shakespeare texts and thus performs
+ better on them in comparison to Wikipedia.
+\begin_inset Newline newline
+\end_inset
+
+Another thing we can notice is the difference in the magnitude of the perplexiti
+es.
+ This is due to the second model being character-based, offering less options
+ for the next token and resulting in a smaller perplexity, as opposed to
+ the first being word-based.
+ There are way more words than characters and so the perplexity is way higher.
+\end_layout
+
+\begin_layout Section*
+
+\lang english
+section 5
+\end_layout
+
+\begin_layout Subsection*
+
+\lang english
+part 1
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+The authors of the article made the T5 (short for Text-to-Text Transfer
+ Transformer) model publicly available.
+ The dataset used to benchmark sentiment analysis is SST-2.
+ In order to evaluate success in this task we measure accuracy (percentage
+ of correct predictions) of the trained model over a test set.
+\end_layout
+
+\begin_layout Subsection*
+
+\lang english
+part 2
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+We used this model: 
+\begin_inset Quotes eld
+\end_inset
+
+michelecafagna26/t5-base-finetuned-sst2-sentiment
+\begin_inset Quotes erd
+\end_inset
+
+ from hugging-face.
+\begin_inset Newline newline
+\end_inset
+
+Then we tested the 4 given sentences and got these results:
+\begin_inset Newline newline
+\end_inset
+
+1.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+This movie is awesome
+\begin_inset Quotes erd
+\end_inset
+
+ - positive
+\begin_inset Newline newline
+\end_inset
+
+2.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+I didn’t like the movie so much
+\begin_inset Quotes erd
+\end_inset
+
+ - negative
+\begin_inset Newline newline
+\end_inset
+
+3.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+I’m not sure what I think about this movie.
+\begin_inset Quotes erd
+\end_inset
+
+ - negative
+\begin_inset Newline newline
+\end_inset
+
+4.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Did you like the movie?
+\begin_inset Quotes erd
+\end_inset
+
+ - positive
+\end_layout
+
+\begin_layout Subsection*
+
+\lang english
+part 3
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+loading the SST2 dataset and evaluating the accuracy of the T5 model yielded
+ a 94.95% accuracy.
+ This indeed matches the results shown on Papers with Code, which are around
+ 95%.
+\end_layout
+
+\begin_layout Subsection*
+
+\lang english
+part 4
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+The data in the SST2 dataset is quite balanced.
+ We measured (in code) that about 51% of the validation set is labeled positive.
+ That is very important when evaluating the model's performace, because
+ otherwise a model biased positively/negatively might mistakenly look better
+ (in terms of accuracy on the unbalanced dataset) than a well-balanced model
+ although the real-life distribution of positive-negative reviews is balanced.
+ The bottom line is that the dataset distribution should represent the real-life
+ distribution and apparently SST2 achieves that.
+\end_layout
+
+\begin_layout Subsection*
+
+\lang english
+part 5
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Simply testing the accuracy can generally work, but there are other metrics
+ that a human can think of that help evaluating a model's quality.
+ One non-trivial capability that one would like to test for is a model's
+ ability to detect 
+\series bold
+sarcasm
+\series default
+ and label a review negative although it might contain many 'positive' words.
+ Another example is to check for a model's response to references to other
+ movies that are considered good/bad, for instance: 
+\begin_inset Quotes eld
+\end_inset
+
+This movie reminds me of Titanic
+\begin_inset Quotes erd
+\end_inset
+
+ should be classified as a positive review.
 \end_layout
 
 \end_body
