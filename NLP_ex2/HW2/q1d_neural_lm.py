@@ -95,6 +95,7 @@ def lm_wrapper(in_word_index, out_word_index, num_to_word_embedding, dimensions,
     return cost, grad
 
 
+
 def eval_neural_lm(eval_data_path):
     """
     Evaluate perplexity (use dev set when tuning and test at the end)
@@ -118,6 +119,54 @@ def eval_neural_lm(eval_data_path):
     ### END YOUR CODE
 
     return perplexity
+
+
+### Q3 CODE START ###
+
+def load_data_as_sentences_q3(path, word_to_num):
+    """
+    Converts the training data to an array of integer arrays.
+      args:
+        path: string pointing to the training data
+        word_to_num: A dictionary from string words to integers
+      returns:
+        An array of integer arrays. Each array is a sentence and each
+        integer is a word.
+    """
+
+    with open(path, 'r') as file:
+        text = file.read().replace(",", "").replace(";", "").replace("\n", " ").replace(":", "")
+    
+    sentences = text.split(".")
+    doc = [[[word] for word in s.split(" ") if word != ''] for s in sentences]
+    
+    return utils.docs_to_indices(doc, word_to_num)
+
+
+def eval_neural_lm_q3(eval_data_path):
+    """
+    Evaluate perplexity (use dev set when tuning and test at the end)
+    """
+
+    # splits data to sentences in the needed format
+    S_dev = load_data_as_sentences_q3(eval_data_path, word_to_num)
+    in_word_index, out_word_index = convert_to_lm_dataset(S_dev)
+    assert len(in_word_index) == len(out_word_index)
+    num_of_examples = len(in_word_index)
+
+    perplexity = 0
+
+    sum_of_logs = 0
+    
+    for i in range(num_of_examples):
+        sum_of_logs += np.log2(forward(num_to_word_embedding[in_word_index[i]], out_word_index[i], params, dimensions))
+        
+    
+    perplexity = 2**(-sum_of_logs/num_of_examples)
+
+    return perplexity
+
+### Q3 CODE END ###
 
 
 if __name__ == "__main__":
@@ -164,9 +213,11 @@ if __name__ == "__main__":
     perplexity = eval_neural_lm('data/lm/ptb-dev.txt')
     print(f"dev perplexity : {perplexity}")
 
+    # NOTE: We use it in Q3
     # Evaluate perplexity with test-data (only at test time!)
     if os.path.exists('data/lm/ptb-test.txt'):
-        perplexity = eval_neural_lm('data/lm/ptb-test.txt')
+        # NOTE: we go to eval_neuarl_lm_q3 and not eval_neuarl_lm because the data format is different
+        perplexity = eval_neural_lm_q3('data/lm/ptb-test.txt')
         print(f"test perplexity : {perplexity}")
     else:
         print("test perplexity will be evaluated only at test time!")
