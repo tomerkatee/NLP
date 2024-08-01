@@ -1,0 +1,587 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "David"
+\font_sans "default" "David"
+\font_typewriter "default" "David"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing other 1.2
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 2cm
+\rightmargin 1cm
+\bottommargin 3cm
+\headheight 0cm
+\headsep 0cm
+\footskip 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "20pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\paragraph_spacing double
+\align center
+
+\series bold
+\size huge
+עיבוד שפה טבעית | תרגיל
+\family roman
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+מגישים:
+\begin_inset Newline newline
+\end_inset
+
+תומר קטיעי
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Newline newline
+\end_inset
+
+
+\numeric off
+אייבי כץ
+\numeric on
+
+\begin_inset Newline newline
+\end_inset
+
+
+\numeric off
+אחמד חלאילה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\lang english
+Question 1
+\end_layout
+
+\begin_layout Subsection*
+
+\lang english
+part 1
+\end_layout
+
+\begin_layout Subsubsection*
+
+\lang english
+a)
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+First of all 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ can be interpreted as a categorical probability distribution because it
+ is a non-negative vector which its entries sum to 1.
+\begin_inset Newline newline
+\end_inset
+
+A more intuitive explanation can be that 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ maps every value vector to the probability that the 
+\begin_inset Quotes eld
+\end_inset
+
+answer
+\begin_inset Quotes erd
+\end_inset
+
+ to the 
+\begin_inset Quotes eld
+\end_inset
+
+query
+\begin_inset Quotes erd
+\end_inset
+
+ lies within the value vector, and the higher the correlation between the
+ query vector and the corresponding key vector the higher the probability
+ the value vector has the information needed for our task.
+\end_layout
+
+\begin_layout Subsubsection*
+
+\lang english
+b)
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+In order for 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ to put almost all of its weight on some 
+\begin_inset Formula $\alpha_{j}$
+\end_inset
+
+ it must happen that 
+\begin_inset Formula $k_{j}^{T}q$
+\end_inset
+
+ is way bigger than 
+\begin_inset Formula $k_{i}^{T}q$
+\end_inset
+
+ for all 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+
+\lang english
+c)
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Under the aforementioned conditions 
+\begin_inset Formula $c$
+\end_inset
+
+ will be a weighted sum of the 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+'s in which 
+\begin_inset Formula $v_{j}$
+\end_inset
+
+ is given the most weight.
+ So we can tell that 
+\begin_inset Formula $c$
+\end_inset
+
+ will usually be close to 
+\begin_inset Formula $v_{j}$
+\end_inset
+
+ (unless 
+\begin_inset Formula $v_{j}$
+\end_inset
+
+ is very small in comparison to other value vectors, in that case other
+ value vectors might pull 
+\begin_inset Formula $c$
+\end_inset
+
+ away from 
+\begin_inset Formula $v_{j}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Subsubsection*
+
+\lang english
+d)
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Intuitively, the output 
+\begin_inset Formula $c$
+\end_inset
+
+ will usually carry a value close to the value vector of the index that
+ has the highest correlation between the corresponding key vector and the
+ given query vector.
+\begin_inset Newline newline
+\end_inset
+
+What it means is that we will output the information carried by the closest
+ candidate (keywise) to the query we search for.
+\end_layout
+
+\begin_layout Subsection*
+
+\lang english
+part 2
+\end_layout
+
+\begin_layout Subsubsection*
+
+\lang english
+a)
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+We can define:
+\begin_inset Formula 
+\[
+M=\begin{pmatrix}a_{1} & \ldots & a_{m}\end{pmatrix}\begin{pmatrix}a_{1}^{T}\\
+\vdots\\
+a_{m}^{T}
+\end{pmatrix}
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+M\left(v_{a}+v_{b}\right)=\begin{pmatrix}a_{1} & \ldots & a_{m}\end{pmatrix}\left(\begin{pmatrix}a_{1}^{T}\\
+\vdots\\
+a_{m}^{T}
+\end{pmatrix}v_{a}+\begin{pmatrix}a_{1}^{T}\\
+\vdots\\
+a_{m}^{T}
+\end{pmatrix}v_{b}\right)=\begin{pmatrix}a_{1} & \ldots & a_{m}\end{pmatrix}\left(\begin{pmatrix}a_{1}^{T}\\
+\vdots\\
+a_{m}^{T}
+\end{pmatrix}\left(c_{1}a_{1}+\ldots+c_{m}a_{m}\right)+\begin{pmatrix}a_{1}^{T}\\
+\vdots\\
+a_{m}^{T}
+\end{pmatrix}\left(d_{1}b_{1}+\ldots+d_{p}b_{p}\right)\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\begin{pmatrix}a_{1} & \ldots & a_{m}\end{pmatrix}\left(\begin{pmatrix}c_{1}\\
+\vdots\\
+c_{m}
+\end{pmatrix}+0\right)=a_{1}c_{1}+\ldots+a_{m}c_{m}=v_{a}
+\]
+
+\end_inset
+
+QED
+\end_layout
+
+\begin_layout Subsubsection*
+
+\lang english
+b)
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+First we'll define a very large constant 
+\begin_inset Formula $r$
+\end_inset
+
+, for example 
+\begin_inset Formula $r=10^{10}$
+\end_inset
+
+.
+ Now we shall define
+\begin_inset Formula 
+\[
+q=r\left(k_{a}+k_{b}\right)
+\]
+
+\end_inset
+
+let's see how it matches the requirements of the question.
+\begin_inset Formula 
+\[
+k_{a}^{T}q=r\left(k_{a}^{T}k_{a}+k_{a}^{T}k_{b}\right)=r
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+k_{b}^{T}q=r\left(k_{b}^{T}k_{a}+k_{b}^{T}k_{b}\right)=r
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\forall i\neq a,b\quad k_{i}^{T}q=r\left(k_{i}^{T}k_{a}+k_{i}^{T}k_{b}\right)=0
+\]
+
+\end_inset
+
+hence we get
+\begin_inset Formula 
+\[
+\alpha_{a}=\frac{\exp\left(k_{a}^{T}q\right)}{\sum_{j=1}^{n}\exp\left(k_{j}^{T}q\right)}=\frac{e^{r}}{n-2+2e^{r}}\approx\frac{1}{2}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\alpha_{b}=\frac{\exp\left(k_{b}^{T}q\right)}{\sum_{j=1}^{n}\exp\left(k_{j}^{T}q\right)}=\frac{e^{r}}{n-2+2e^{r}}\approx\frac{1}{2}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\forall i\neq a,b\quad\alpha_{i}=\frac{\exp\left(k_{i}^{T}q\right)}{\sum_{j=1}^{n}\exp\left(k_{j}^{T}q\right)}=\frac{1}{n-2+2e^{r}}\approx0
+\]
+
+\end_inset
+
+hence we get the required
+\begin_inset Formula 
+\[
+c=\sum_{j=1}^{n}\alpha_{j}v_{j}\approx\frac{1}{2}\left(v_{a}+v_{b}\right)
+\]
+
+\end_inset
+
+QED
+\end_layout
+
+\begin_layout Subsection*
+
+\lang english
+part 3
+\end_layout
+
+\begin_layout Subsubsection*
+
+\lang english
+a)
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+We'll define 
+\begin_inset Formula $q$
+\end_inset
+
+ to be (
+\begin_inset Formula $r$
+\end_inset
+
+ as before)
+\begin_inset Formula 
+\[
+q=r\left(\mu_{a}+\mu_{b}\right)
+\]
+
+\end_inset
+
+We can say that because 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is vanishingly small, 
+\begin_inset Formula $\forall i.\quad k_{i}\approx\mu_{i}$
+\end_inset
+
+ and hence all the above claims from part 2 approximately hold.
+\end_layout
+
+\begin_layout Subsubsection*
+
+\lang english
+b)
+\end_layout
+
+\end_body
+\end_document
