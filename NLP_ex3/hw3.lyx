@@ -570,8 +570,8 @@ We can say that because
 \begin_inset Formula $\alpha$
 \end_inset
 
- is vanishingly small, 
-\begin_inset Formula $\forall i.\quad k_{i}\approx\mu_{i}$
+ is vanishingly small and also 
+\begin_inset Formula $\forall i.\ k_{i}\approx\mu_{i}$
 \end_inset
 
  and hence all the above claims from part 2 approximately hold.
@@ -581,6 +581,393 @@ We can say that because
 
 \lang english
 b)
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+By the fact that 
+\begin_inset Formula $k_{a}$
+\end_inset
+
+ points roughly in the same direction as 
+\begin_inset Formula $\mu_{a}$
+\end_inset
+
+ but with large variances in magnitude, we can tell that
+\begin_inset Formula 
+\[
+k_{a}\approx\gamma\mu_{a}
+\]
+
+\end_inset
+
+for some 
+\begin_inset Formula $\gamma\in\mathbb{R}^{+}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Hence we get:
+\begin_inset Formula 
+\[
+k_{a}^{T}q\approx\gamma\mu_{a}^{T}q=r\left(\gamma\mu_{a}^{T}\mu_{a}+\gamma\mu_{a}^{T}\mu_{b}\right)=\gamma r
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+k_{b}^{T}q\approx r\left(\mu_{b}^{T}\mu_{a}+\mu_{b}^{T}\mu_{b}\right)=r
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\forall i\neq a,b\quad k_{i}^{T}q\approx r\left(\mu_{i}^{T}\mu_{a}+\mu_{i}^{T}\mu_{b}\right)=0
+\]
+
+\end_inset
+
+and that means:
+\begin_inset Formula 
+\[
+\alpha_{a}=\frac{\exp\left(k_{a}^{T}q\right)}{\sum_{j=1}^{n}\exp\left(k_{j}^{T}q\right)}\approx\frac{e^{\gamma r}}{n-2+e^{r}+e^{\gamma r}}\approx\frac{\left(e^{r}\right)^{\gamma}}{e^{r}+\left(e^{r}\right)^{\gamma}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\alpha_{b}=\frac{\exp\left(k_{b}^{T}q\right)}{\sum_{j=1}^{n}\exp\left(k_{j}^{T}q\right)}\approx\frac{e^{r}}{n-2+e^{r}+e^{\gamma r}}\approx\frac{e^{r}}{e^{r}+\left(e^{r}\right)^{\gamma}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\forall i\neq a,b\quad\alpha_{i}=\frac{\exp\left(k_{i}^{T}q\right)}{\sum_{j=1}^{n}\exp\left(k_{j}^{T}q\right)}\approx\frac{1}{n-2+e^{r}+e^{\gamma r}}\approx0
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+We can notice (since 
+\begin_inset Formula $e^{r}$
+\end_inset
+
+ is very large) that ():
+\begin_inset Formula 
+\[
+\alpha_{a}\approx\frac{\left(e^{r}\right)^{\gamma}}{e^{r}+\left(e^{r}\right)^{\gamma}}\approx\begin{cases}
+1 & \gamma>1\\
+\frac{1}{2} & \gamma=1\\
+0 & \gamma<1
+\end{cases}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\alpha_{b}\approx\frac{e^{r}}{e^{r}+\left(e^{r}\right)^{\gamma}}\approx\begin{cases}
+0 & \gamma>1\\
+\frac{1}{2} & \gamma=1\\
+1 & \gamma<1
+\end{cases}
+\]
+
+\end_inset
+
+Notice that when we say 
+\begin_inset Formula $\gamma>1$
+\end_inset
+
+ we mean that 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is big enough so that 
+\begin_inset Formula $\frac{\left(e^{r}\right)^{\gamma}}{e^{r}+\left(e^{r}\right)^{\gamma}}$
+\end_inset
+
+ approximates to 1 or 0, and not just 
+\begin_inset Formula $1.000\ldots01$
+\end_inset
+
+; A specific value depends on 
+\begin_inset Formula $r$
+\end_inset
+
+.
+ A similar approach is assumed for 
+\begin_inset Formula $\gamma<1$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+And thus we get an approximation for 
+\begin_inset Formula $c$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+c=\sum_{j=1}^{n}\alpha_{j}v_{j}\approx\alpha_{a}v_{a}+\alpha_{b}v_{b}\approx\begin{cases}
+v_{a} & \gamma>1\\
+\frac{1}{2}\left(v_{a}+v_{b}\right) & \gamma=1\\
+v_{b} & \gamma<1
+\end{cases}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Since the size of 
+\begin_inset Formula $e^{r}$
+\end_inset
+
+ and the large variance in magntitude for 
+\begin_inset Formula $k_{a}$
+\end_inset
+
+, we expect 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ to only rarely be close enough to 1 for 
+\begin_inset Formula $c$
+\end_inset
+
+ to approximate to 
+\begin_inset Formula $\frac{1}{2}\left(v_{a}+v_{b}\right)$
+\end_inset
+
+.
+ Thus we usually get either 
+\begin_inset Formula $c\approx v_{a}$
+\end_inset
+
+ or 
+\begin_inset Formula $c\approx v_{b}$
+\end_inset
+
+, although it's expectation is 
+\begin_inset Formula $\frac{1}{2}\left(v_{a}+v_{b}\right)$
+\end_inset
+
+.
+ This, by definition, means that 
+\begin_inset Formula $Var(c)$
+\end_inset
+
+ is very big.
+\end_layout
+
+\begin_layout Subsection*
+
+\lang english
+part 4
+\end_layout
+
+\begin_layout Subsubsection*
+
+\lang english
+a)
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+We'll set:
+\begin_inset Formula 
+\[
+q_{1}=r\mu_{a},\quad q_{2}=r\mu_{b}
+\]
+
+\end_inset
+
+and get
+\begin_inset Formula 
+\[
+k_{a}^{T}q_{1}=rk_{a}^{T}\mu_{a}\approx r\mu_{a}^{T}\mu_{a}=r
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\forall i\neq a\quad k_{i}^{T}q_{1}\approx r\mu_{i}^{T}\mu_{a}=0
+\]
+
+\end_inset
+
+hence we get
+\begin_inset Formula 
+\[
+\alpha_{a}^{(1)}=\frac{\exp\left(k_{a}^{T}q\right)}{\sum_{j=1}^{n}\exp\left(k_{j}^{T}q\right)}\approx\frac{e^{r}}{n-1+e^{r}}\approx1
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\forall i\neq a\quad\alpha_{i}^{(1)}=\frac{\exp\left(k_{i}^{T}q\right)}{\sum_{j=1}^{n}\exp\left(k_{j}^{T}q\right)}\approx\frac{1}{n-1+e^{r}}\approx0
+\]
+
+\end_inset
+
+hence we get the required
+\begin_inset Formula 
+\[
+c_{1}=\sum_{j=1}^{n}\alpha_{j}^{(1)}v_{j}\approx v_{a}
+\]
+
+\end_inset
+
+for 
+\begin_inset Formula $q_{2}=r\mu_{b}$
+\end_inset
+
+ we get the needed result in a similar manner:
+\begin_inset Formula 
+\[
+c_{2}=\sum_{j=1}^{n}\alpha_{j}^{(2)}v_{j}\approx v_{b}
+\]
+
+\end_inset
+
+and so we get an approximation for 
+\begin_inset Formula $c$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+c\approx\frac{1}{2}(v_{a}+v_{b})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+
+\lang english
+b)
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Similarly to the previous part, we can say that:
+\begin_inset Formula 
+\[
+k_{a}\approx\gamma\mu_{a}
+\]
+
+\end_inset
+
+for some 
+\begin_inset Formula $\gamma\in\mathbb{\mathbb{R}}^{+}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Hence we get:
+\begin_inset Formula 
+\[
+k_{a}^{T}q\approx\gamma\mu_{a}^{T}q=r\gamma\mu_{a}^{T}\mu_{a}=\gamma r
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\forall i\neq a\quad k_{i}^{T}q\approx r\mu_{i}^{T}\mu_{a}=0
+\]
+
+\end_inset
+
+and that means:
+\begin_inset Formula 
+\[
+\alpha_{a}^{(1)}=\frac{\exp\left(k_{a}^{T}q\right)}{\sum_{j=1}^{n}\exp\left(k_{j}^{T}q\right)}\approx\frac{e^{\gamma r}}{n-1+e^{\gamma r}}\approx1
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\forall i\neq a\quad\alpha_{i}^{(1)}=\frac{\exp\left(k_{i}^{T}q\right)}{\sum_{j=1}^{n}\exp\left(k_{j}^{T}q\right)}\approx\frac{1}{n-1+e^{\gamma r}}\approx0
+\]
+
+\end_inset
+
+and thus we still get
+\begin_inset Formula 
+\[
+c_{1}=\sum_{j=1}^{n}\alpha_{j}^{(1)}v_{j}\approx v_{a}
+\]
+
+\end_inset
+
+similarly, we get
+\begin_inset Formula 
+\[
+c_{2}=\sum_{j=1}^{n}\alpha_{j}^{(2)}v_{j}\approx v_{b}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+that tells us that the variance of 
+\begin_inset Formula $c_{1},c_{2}$
+\end_inset
+
+ is very small, and that means we can expect 
+\begin_inset Formula $c$
+\end_inset
+
+ to be
+\begin_inset Formula 
+\[
+c\approx\frac{1}{2}(v_{a}+v_{b})
+\]
+
+\end_inset
+
+as we wished for.
 \end_layout
 
 \end_body
