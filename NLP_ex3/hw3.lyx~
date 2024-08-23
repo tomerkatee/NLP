@@ -955,7 +955,7 @@ that tells us that the variance of
 \begin_inset Formula $c_{1},c_{2}$
 \end_inset
 
- is very small, and that means that we can expect 
+ is very small, and that means we can expect 
 \begin_inset Formula $c$
 \end_inset
 
@@ -968,6 +968,36 @@ c\approx\frac{1}{2}(v_{a}+v_{b})
 \end_inset
 
 as we wished for.
+\end_layout
+
+\begin_layout Section*
+
+\lang english
+Question 3 (Bonus)
+\end_layout
+
+\begin_layout Subsection*
+
+\lang english
+part 4
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+After finetuning on birth_places_train.tsv we got 
+\begin_inset Formula $1.4\%$
+\end_inset
+
+ accuracy on evaluation.
+\begin_inset Newline newline
+\end_inset
+
+With a model that always predicts 'London' we got 
+\begin_inset Formula $x$
+\end_inset
+
+ accuracy on evaluation.
 \end_layout
 
 \end_body
