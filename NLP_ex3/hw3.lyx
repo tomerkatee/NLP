@@ -1000,5 +1000,53 @@ With a model that always predicts 'London' we got
  accuracy on evaluation.
 \end_layout
 
+\begin_layout Subsection*
+
+\lang english
+part 6
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+After finetuning on birth_places_train.tsv we got 
+\begin_inset Formula $23.6\%$
+\end_inset
+
+ accuracy on evaluation.
+\end_layout
+
+\begin_layout Subsection*
+
+\lang english
+part 7
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+The pretrained model was able to achieve much higher accuracy than the non-pretr
+ained one because the pretrained model learned not only places of birth
+ but also how to refer to this information inside wiki.txt, where it appears
+ in normal sentences.
+ For names of people that are not seen in the finetuning training set, it's
+ naturally very difficult for the non-pretrained model to then predict where
+ those people where born.
+ In contrast, the pretrained model, thanks to finetuning on a similar tsv
+ file, can locate the birth place of people that don't appear in finetuning
+ using information about them gained in the pretraining stage, thus achieving
+ better accuracy.
+ Finetuning basically 
+\begin_inset Quotes eld
+\end_inset
+
+teaches
+\begin_inset Quotes erd
+\end_inset
+
+ the model how to find birth places utilizing the information gained in
+ the pretraining stage.
+\end_layout
+
 \end_body
 \end_document

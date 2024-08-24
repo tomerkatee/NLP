@@ -994,10 +994,32 @@ After finetuning on birth_places_train.tsv we got
 \end_inset
 
 With a model that always predicts 'London' we got 
-\begin_inset Formula $x$
+\begin_inset Formula $5\%$
 \end_inset
 
  accuracy on evaluation.
+\end_layout
+
+\begin_layout Subsection*
+
+\lang english
+part 6
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+After finetuning on birth_places_train.tsv we got 
+\begin_inset Formula $23.6\%$
+\end_inset
+
+ accuracy on evaluation.
+\end_layout
+
+\begin_layout Subsection*
+
+\lang english
+part 7
 \end_layout
 
 \end_body
