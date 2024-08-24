@@ -168,7 +168,24 @@ class CharCorruptionDataset(Dataset):
 
     def __getitem__(self, idx):
         # TODO [part e]: see spec above
-        raise NotImplementedError
+        convert_to_tensor = lambda s: torch.tensor([self.stoi[c] for c in s])
+        document = self.data[idx]
+        if(len(document) < 4):
+            empty_padding = convert_to_tensor(self.PAD_CHAR * (self.block_size-1))
+            return (empty_padding, empty_padding)
+        truncated_document = document[:random.randint(4, int(self.block_size*7/8))]
+        masked_content_len = random.randint(len(truncated_document)//6, len(truncated_document)//3)
+        masked_content_start = random.randrange(0, len(truncated_document)-masked_content_len)
+        prefix = truncated_document[:masked_content_start]
+        masked_content = truncated_document[masked_content_start:masked_content_start+masked_content_len]
+        suffix = truncated_document[masked_content_start+masked_content_len:]
+        masked_string_unpadded = prefix + self.MASK_CHAR + suffix + self.MASK_CHAR + masked_content
+        masked_string = masked_string_unpadded + (self.block_size - len(masked_string_unpadded)) * self.PAD_CHAR
+        input = masked_string[:-1]
+        output = masked_string[1:]
+        return (convert_to_tensor(input), convert_to_tensor(output))
+        
+
 
 """
 Code under here is strictly for your debugging purposes; feel free to modify
